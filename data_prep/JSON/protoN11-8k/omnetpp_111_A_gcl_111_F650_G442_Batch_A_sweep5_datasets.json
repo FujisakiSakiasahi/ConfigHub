@@ -1,0 +1,4227 @@
+[
+  {
+    "run_id": 3101,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 100000,
+            "packet_size_bytes": 1000,
+            "bandwidth_Mbps": 80.0,
+            "load_ratio": 0.08
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 160.48,
+        "total_load_ratio": 0.16048
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 1001,
+            "pkts_received": 998,
+            "pkts_loss_count": 3,
+            "delay_max_us": 226.77,
+            "delay_stddev_us": 65.041,
+            "delay_mean_us": 58.0098,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002997,
+            "throughput_Mbps": 79.84,
+            "queue_max_length": 2
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3102,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 100000,
+            "packet_size_bytes": 100,
+            "bandwidth_Mbps": 8.0,
+            "load_ratio": 0.008
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 88.48,
+        "total_load_ratio": 0.08848
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 1001,
+            "pkts_received": 998,
+            "pkts_loss_count": 3,
+            "delay_max_us": 219.57,
+            "delay_stddev_us": 66.9107,
+            "delay_mean_us": 43.9866,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002997,
+            "throughput_Mbps": 7.98,
+            "queue_max_length": 3
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3103,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 100.96,
+        "total_load_ratio": 0.10096
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 1001,
+            "pkts_received": 998,
+            "pkts_loss_count": 3,
+            "delay_max_us": 220.818,
+            "delay_stddev_us": 66.7365,
+            "delay_mean_us": 46.1058,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002997,
+            "throughput_Mbps": 20.44,
+            "queue_max_length": 3
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3104,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 100000,
+            "packet_size_bytes": 500,
+            "bandwidth_Mbps": 40.0,
+            "load_ratio": 0.04
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 120.48,
+        "total_load_ratio": 0.12048
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 1001,
+            "pkts_received": 998,
+            "pkts_loss_count": 3,
+            "delay_max_us": 222.77,
+            "delay_stddev_us": 66.1735,
+            "delay_mean_us": 50.0098,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002997,
+            "throughput_Mbps": 39.92,
+            "queue_max_length": 2
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3105,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 100000,
+            "packet_size_bytes": 64,
+            "bandwidth_Mbps": 5.12,
+            "load_ratio": 0.00512
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 85.6,
+        "total_load_ratio": 0.0856
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 1001,
+            "pkts_received": 998,
+            "pkts_loss_count": 3,
+            "delay_max_us": 219.282,
+            "delay_stddev_us": 66.9521,
+            "delay_mean_us": 43.4976,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002997,
+            "throughput_Mbps": 5.11,
+            "queue_max_length": 3
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3106,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 15000,
+            "packet_size_bytes": 1000,
+            "bandwidth_Mbps": 533.3333,
+            "load_ratio": 0.533333
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 613.8133,
+        "total_load_ratio": 0.613813
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 6667,
+            "pkts_received": 6653,
+            "pkts_loss_count": 14,
+            "delay_max_us": 239.162,
+            "delay_stddev_us": 72.0421,
+            "delay_mean_us": 76.5485,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 532.24,
+            "queue_max_length": 15
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 211.8436,
+            "delay_mean_us": 221.2981,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3107,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 15000,
+            "packet_size_bytes": 100,
+            "bandwidth_Mbps": 53.3333,
+            "load_ratio": 0.053333
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 133.8133,
+        "total_load_ratio": 0.133813
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 6667,
+            "pkts_received": 6654,
+            "pkts_loss_count": 13,
+            "delay_max_us": 219.57,
+            "delay_stddev_us": 55.6902,
+            "delay_mean_us": 29.3304,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.00195,
+            "throughput_Mbps": 53.23,
+            "queue_max_length": 15
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3108,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 15000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 136.5333,
+            "load_ratio": 0.136533
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 217.0133,
+        "total_load_ratio": 0.217013
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 6667,
+            "pkts_received": 6653,
+            "pkts_loss_count": 14,
+            "delay_max_us": 225.818,
+            "delay_stddev_us": 58.9283,
+            "delay_mean_us": 35.2681,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 136.25,
+            "queue_max_length": 15
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3109,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 15000,
+            "packet_size_bytes": 500,
+            "bandwidth_Mbps": 266.6667,
+            "load_ratio": 0.266667
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 347.1467,
+        "total_load_ratio": 0.347147
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 6667,
+            "pkts_received": 6653,
+            "pkts_loss_count": 14,
+            "delay_max_us": 227.77,
+            "delay_stddev_us": 61.5168,
+            "delay_mean_us": 43.888,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 266.12,
+            "queue_max_length": 14
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.3271,
+            "delay_mean_us": 219.7531,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3110,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 15000,
+            "packet_size_bytes": 64,
+            "bandwidth_Mbps": 34.1333,
+            "load_ratio": 0.034133
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 114.6133,
+        "total_load_ratio": 0.114613
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 6667,
+            "pkts_received": 6654,
+            "pkts_loss_count": 13,
+            "delay_max_us": 219.282,
+            "delay_stddev_us": 55.3868,
+            "delay_mean_us": 28.3214,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.00195,
+            "throughput_Mbps": 34.07,
+            "queue_max_length": 15
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3111,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 250000,
+            "packet_size_bytes": 1000,
+            "bandwidth_Mbps": 32.0,
+            "load_ratio": 0.032
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 112.48,
+        "total_load_ratio": 0.11248
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 401,
+            "pkts_received": 400,
+            "pkts_loss_count": 1,
+            "delay_max_us": 24.162,
+            "delay_stddev_us": 3.0842,
+            "delay_mean_us": 18.8046,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002494,
+            "throughput_Mbps": 32.0,
+            "queue_max_length": 1
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 212.8193,
+            "delay_mean_us": 220.3236,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3112,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 250000,
+            "packet_size_bytes": 100,
+            "bandwidth_Mbps": 3.2,
+            "load_ratio": 0.0032
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 83.68,
+        "total_load_ratio": 0.08368
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 401,
+            "pkts_received": 400,
+            "pkts_loss_count": 1,
+            "delay_max_us": 16.962,
+            "delay_stddev_us": 6.1964,
+            "delay_mean_us": 6.1942,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002494,
+            "throughput_Mbps": 3.2,
+            "queue_max_length": 1
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.4827,
+            "delay_mean_us": 219.6058,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3113,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 250000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 8.192,
+            "load_ratio": 0.008192
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 88.672,
+        "total_load_ratio": 0.088672
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 401,
+            "pkts_received": 400,
+            "pkts_loss_count": 1,
+            "delay_max_us": 18.21,
+            "delay_stddev_us": 5.657,
+            "delay_mean_us": 8.3774,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002494,
+            "throughput_Mbps": 8.19,
+            "queue_max_length": 1
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.3663,
+            "delay_mean_us": 219.7302,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3114,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 250000,
+            "packet_size_bytes": 500,
+            "bandwidth_Mbps": 16.0,
+            "load_ratio": 0.016
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 96.48,
+        "total_load_ratio": 0.09648
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 401,
+            "pkts_received": 400,
+            "pkts_loss_count": 1,
+            "delay_max_us": 20.162,
+            "delay_stddev_us": 4.8131,
+            "delay_mean_us": 11.7971,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002494,
+            "throughput_Mbps": 16.0,
+            "queue_max_length": 1
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.1854,
+            "delay_mean_us": 219.9248,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3115,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 250000,
+            "packet_size_bytes": 64,
+            "bandwidth_Mbps": 2.048,
+            "load_ratio": 0.002048
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 82.528,
+        "total_load_ratio": 0.082528
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 401,
+            "pkts_received": 400,
+            "pkts_loss_count": 1,
+            "delay_max_us": 16.674,
+            "delay_stddev_us": 6.3209,
+            "delay_mean_us": 5.6904,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002494,
+            "throughput_Mbps": 2.05,
+            "queue_max_length": 1
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.5097,
+            "delay_mean_us": 219.5771,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3116,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 30000,
+            "packet_size_bytes": 1000,
+            "bandwidth_Mbps": 266.6667,
+            "load_ratio": 0.266667
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 347.1467,
+        "total_load_ratio": 0.347147
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 3334,
+            "pkts_received": 3327,
+            "pkts_loss_count": 7,
+            "delay_max_us": 236.77,
+            "delay_stddev_us": 61.5201,
+            "delay_mean_us": 51.5623,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 266.16,
+            "queue_max_length": 7
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.3271,
+            "delay_mean_us": 219.7537,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3117,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 30000,
+            "packet_size_bytes": 100,
+            "bandwidth_Mbps": 26.6667,
+            "load_ratio": 0.026667
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 107.1467,
+        "total_load_ratio": 0.107147
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 3334,
+            "pkts_received": 3327,
+            "pkts_loss_count": 7,
+            "delay_max_us": 219.57,
+            "delay_stddev_us": 55.4448,
+            "delay_mean_us": 28.8645,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 26.62,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3118,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 30000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 68.2667,
+            "load_ratio": 0.068267
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 148.7467,
+        "total_load_ratio": 0.148747
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 3334,
+            "pkts_received": 3327,
+            "pkts_loss_count": 7,
+            "delay_max_us": 220.818,
+            "delay_stddev_us": 55.7859,
+            "delay_mean_us": 32.0177,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 68.14,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3119,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 30000,
+            "packet_size_bytes": 500,
+            "bandwidth_Mbps": 133.3333,
+            "load_ratio": 0.133333
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 213.8133,
+        "total_load_ratio": 0.213813
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 3334,
+            "pkts_received": 3327,
+            "pkts_loss_count": 7,
+            "delay_max_us": 222.77,
+            "delay_stddev_us": 56.3509,
+            "delay_mean_us": 37.1874,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 133.08,
+            "queue_max_length": 7
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3120,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 30000,
+            "packet_size_bytes": 64,
+            "bandwidth_Mbps": 17.0667,
+            "load_ratio": 0.017067
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 97.5467,
+        "total_load_ratio": 0.097547
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 3334,
+            "pkts_received": 3327,
+            "pkts_loss_count": 7,
+            "delay_max_us": 219.282,
+            "delay_stddev_us": 55.3705,
+            "delay_mean_us": 28.1459,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0021,
+            "throughput_Mbps": 17.03,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3121,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 50000,
+            "packet_size_bytes": 1000,
+            "bandwidth_Mbps": 160.0,
+            "load_ratio": 0.16
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 240.48,
+        "total_load_ratio": 0.24048
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 2001,
+            "pkts_received": 1996,
+            "pkts_loss_count": 5,
+            "delay_max_us": 226.77,
+            "delay_stddev_us": 60.8042,
+            "delay_mean_us": 51.5013,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002499,
+            "throughput_Mbps": 159.68,
+            "queue_max_length": 4
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3122,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 50000,
+            "packet_size_bytes": 100,
+            "bandwidth_Mbps": 16.0,
+            "load_ratio": 0.016
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 96.48,
+        "total_load_ratio": 0.09648
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 2001,
+            "pkts_received": 1996,
+            "pkts_loss_count": 5,
+            "delay_max_us": 219.57,
+            "delay_stddev_us": 60.8032,
+            "delay_mean_us": 35.3769,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002499,
+            "throughput_Mbps": 15.97,
+            "queue_max_length": 5
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3123,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 50000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 40.96,
+            "load_ratio": 0.04096
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 121.44,
+        "total_load_ratio": 0.12144
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 2001,
+            "pkts_received": 1996,
+            "pkts_loss_count": 5,
+            "delay_max_us": 220.818,
+            "delay_stddev_us": 60.8379,
+            "delay_mean_us": 37.9943,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002499,
+            "throughput_Mbps": 40.88,
+            "queue_max_length": 5
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3124,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 50000,
+            "packet_size_bytes": 500,
+            "bandwidth_Mbps": 80.0,
+            "load_ratio": 0.08
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 160.48,
+        "total_load_ratio": 0.16048
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 2001,
+            "pkts_received": 1996,
+            "pkts_loss_count": 5,
+            "delay_max_us": 222.77,
+            "delay_stddev_us": 60.8055,
+            "delay_mean_us": 42.3826,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002499,
+            "throughput_Mbps": 79.84,
+            "queue_max_length": 4
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "run_id": 3125,
+    "config_id": "omnetpp_111_A_gcl_111_F650_G442_Batch_A_sweep5",
+    "topology": {
+      "topology_id": "TsnIntelStar",
+      "num_talkers": 1,
+      "num_switches": 1,
+      "num_listeners": 1,
+      "link_datarate_Mbps": 1000,
+      "device_model": "intel_i226",
+      "num_tx_queues": 4,
+      "gcl_cycle_time_ns": 1000000,
+      "edges": [
+        {
+          "from": "T1",
+          "to": "S1"
+        },
+        {
+          "from": "S1",
+          "to": "L1",
+          "port_id": "S1P1"
+        }
+      ]
+    },
+    "workload": [
+      {
+        "talker_id": "T1",
+        "switch_id": "S1",
+        "listener_id": "L1",
+        "num_streams": 3,
+        "streams": [
+          {
+            "stream_id": "T1STR_01",
+            "type": "TT6",
+            "pcp": 6,
+            "gate_id": 2,
+            "period_ns": 100000,
+            "packet_size_bytes": 256,
+            "bandwidth_Mbps": 20.48,
+            "load_ratio": 0.02048
+          },
+          {
+            "stream_id": "T1STR_02",
+            "type": "TT5",
+            "pcp": 5,
+            "gate_id": 1,
+            "period_ns": 50000,
+            "packet_size_bytes": 64,
+            "bandwidth_Mbps": 10.24,
+            "load_ratio": 0.01024
+          },
+          {
+            "stream_id": "T1STR_03",
+            "type": "BE",
+            "pcp": 0,
+            "gate_id": 0,
+            "period_ns": 200000,
+            "packet_size_bytes": 1500,
+            "bandwidth_Mbps": 60.0,
+            "load_ratio": 0.06
+          }
+        ],
+        "total_bandwidth_Mbps": 90.72,
+        "total_load_ratio": 0.09072
+      }
+    ],
+    "gcl": [
+      {
+        "parent_id": "T1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      },
+      {
+        "parent_id": "S1P1",
+        "gcl_sequences": [
+          {
+            "sequence_index": 0,
+            "gate_bitmask": "0010",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 1,
+            "gate_bitmask": "0100",
+            "duration_ns": 400000
+          },
+          {
+            "sequence_index": 2,
+            "gate_bitmask": "1000",
+            "duration_ns": 200000
+          }
+        ]
+      }
+    ],
+    "performance": [
+      {
+        "listener_id": "L1",
+        "port_id": "S1P1",
+        "metrics": [
+          {
+            "gate_id": 0,
+            "pkts_sent": 501,
+            "pkts_received": 500,
+            "pkts_loss_count": 1,
+            "delay_max_us": 812.946,
+            "delay_stddev_us": 264.4682,
+            "delay_mean_us": 439.6795,
+            "deadline_ns": 500000,
+            "deadline_miss_ratio": 0.001996,
+            "throughput_Mbps": 60.0,
+            "queue_max_length": 8
+          },
+          {
+            "gate_id": 1,
+            "pkts_sent": 2001,
+            "pkts_received": 1996,
+            "pkts_loss_count": 5,
+            "delay_max_us": 219.282,
+            "delay_stddev_us": 60.7984,
+            "delay_mean_us": 34.7729,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.002499,
+            "throughput_Mbps": 10.22,
+            "queue_max_length": 5
+          },
+          {
+            "gate_id": 2,
+            "pkts_sent": 1001,
+            "pkts_received": 994,
+            "pkts_loss_count": 7,
+            "delay_max_us": 602.562,
+            "delay_stddev_us": 213.6103,
+            "delay_mean_us": 219.4702,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.006993,
+            "throughput_Mbps": 20.36,
+            "queue_max_length": 6
+          },
+          {
+            "gate_id": 3,
+            "pkts_sent": 0,
+            "pkts_received": 0,
+            "pkts_loss_count": 0,
+            "delay_max_us": 0.0,
+            "delay_stddev_us": 0.0,
+            "delay_mean_us": 0.0,
+            "deadline_ns": 100000,
+            "deadline_miss_ratio": 0.0,
+            "throughput_Mbps": 0.0,
+            "queue_max_length": 0
+          }
+        ]
+      }
+    ]
+  }
+]

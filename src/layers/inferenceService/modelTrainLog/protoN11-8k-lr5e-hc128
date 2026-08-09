@@ -1,0 +1,35 @@
+Loaded 8727 rows across 420 configs
+  split by config -> train:294  val:63  test:63 configs
+  rows            -> train:6083  val:1338  test:1306
+
+Baseline (predict-the-average) val MSE: 0.166671
+  -> the model is only useful if it gets BELOW this.
+
+Epoch    1 | train MSE 0.138805 | val MSE 0.130315  <- new best
+Epoch   10 | train MSE 0.086783 | val MSE 0.080045  <- new best
+Epoch   20 | train MSE 0.080509 | val MSE 0.071473  <- new best
+Epoch   30 | train MSE 0.079019 | val MSE 0.070001
+Epoch   40 | train MSE 0.077972 | val MSE 0.071435
+Epoch   50 | train MSE 0.077589 | val MSE 0.074596
+Epoch   60 | train MSE 0.077274 | val MSE 0.072284
+Epoch   70 | train MSE 0.077475 | val MSE 0.074472
+Epoch   80 | train MSE 0.077496 | val MSE 0.069833
+Epoch   90 | train MSE 0.076978 | val MSE 0.074478
+Epoch  100 | train MSE 0.077010 | val MSE 0.070693
+Epoch  110 | train MSE 0.076845 | val MSE 0.071734
+Epoch  120 | train MSE 0.076570 | val MSE 0.074963
+Epoch  130 | train MSE 0.076802 | val MSE 0.073801
+Epoch  140 | train MSE 0.076645 | val MSE 0.074555
+Epoch  150 | train MSE 0.076337 | val MSE 0.073757
+Epoch  160 | train MSE 0.076133 | val MSE 0.074326
+Epoch  170 | train MSE 0.076698 | val MSE 0.071983
+Epoch  180 | train MSE 0.076000 | val MSE 0.073883
+Epoch  190 | train MSE 0.075961 | val MSE 0.075218
+Epoch  200 | train MSE 0.075844 | val MSE 0.075661
+
+================ RESULT ================
+  model  test MSE : 0.086226   (lower = better)
+  dumb-guess MSE  : 0.181610
+  --> model beats the baseline by 52.5%  (it learned something)
+  tested on 63 configs the model never saw during training.
+========================================
