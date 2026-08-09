@@ -64,3 +64,6 @@ From `src/layers/inferenceService/`:
 python gnn_model.py train ../../../data_prep/JSON/protoN11-8k-filtered_datasets.json
 python gnn_model.py predict <path/to/datasets.json>
 ```
+
+### The latest checkpoint model / suggested model
+protoN11-8k-lr5e
